@@ -1,7 +1,7 @@
 # parameters
-ARG REPO_NAME="CSCE274-base"
-ARG DESCRIPTION="Base class repo for sc CSCE 274"
-ARG MAINTAINER="Ioannis Rekleitis (yiannisr@cse.sc.edu)"
+ARG REPO_NAME="csce74-oruganti"
+ARG DESCRIPTION="This is for CSCE274 from Anirudh"
+ARG MAINTAINER="V.N.Anirudh Oruganti (oruganti@email.sc.edu)"
 # pick an icon from: https://fontawesome.com/v4.7.0/icons/
 ARG ICON="cube"
 
