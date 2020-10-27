@@ -1,0 +1,10 @@
+<launch>
+
+  <include file="(find homework1)/launch/homework1.launch"/>
+    <node pkg="homework4" name="talker" type="publisher.py"output="screen"/>
+    </node>
+    <node pkg="homework4" name="listener" type="subscriber.py"output="screen"/>
+
+  </node>
+  
+</launch>
