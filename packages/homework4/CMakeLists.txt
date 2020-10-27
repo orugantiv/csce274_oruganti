@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(homework1)
+project(homework4)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -122,7 +122,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/homework1.cpp
+#   src/${PROJECT_NAME}/homework4.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -197,7 +197,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_homework1.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_homework4.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
