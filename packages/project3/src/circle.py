@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 #i used class slides
 import rospy
-from std_msgs.msg import Float32
+from duckietown_msgs.msg import Twist2DStamped
 
-def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + " Output: %s", data.data)
+rospy.init_node('circle')
 
-def listener():
-    rospy.init_node('listener', anonymous=True)
-    rospy.Subscriber("homework1/total", Float32, callback)
-    rospy.spin()
+publisher = rospy.Publisher("homework1/delta", Twist2DStamped, queue_size=1)
+msg= Twist2DStamped(header=None, v='0.1',omega='0')
+publisher.publish(msg)
 
-if __name__ == '__main__':
-    listener()
+while not rospy.is_shutdown():
+    publisher.publish(19)
+    rate.sleep()
+
 
