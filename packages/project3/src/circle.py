@@ -5,12 +5,12 @@ from duckietown_msgs.msg import Twist2DStamped
 
 rospy.init_node('circle')
 
-publisher = rospy.Publisher("homework1/delta", Twist2DStamped, queue_size=1)
+publisher = rospy.Publisher("car_cmd_switch_node/cmd", Twist2DStamped, queue_size=1)
 msg= Twist2DStamped(header=None, v='0.1',omega='0')
-publisher.publish(msg)
+sleep(3)
+msg= Twist2DStamped(header=None, v='0.1',omega='0')
 
 while not rospy.is_shutdown():
-    publisher.publish(19)
+    publisher.publish(msg)
     rate.sleep()
-
 
