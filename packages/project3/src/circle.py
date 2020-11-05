@@ -2,15 +2,16 @@
 #i used class slides
 import rospy
 from duckietown_msgs.msg import Twist2DStamped
+from time import sleep
 
-rospy.init_node('circle')
+def circle():
 
-publisher = rospy.Publisher("car_cmd_switch_node/cmd", Twist2DStamped, queue_size=1)
-msg= Twist2DStamped(header=None, v='0.1',omega='0')
-sleep(3)
-msg= Twist2DStamped(header=None, v='0.1',omega='0')
+    pub = rospy.Publisher("car_cmd_switch_node/cmd", Twist2DStamped, queue_size=10)
+    rospy.init_node('Circle')
+    pub.publish(Twist2DStamped(header=None, v=0.5,omega=0.0))
+    sleep(10)
+    pub.publish(Twist2DStamped(header=None, v=0.0,omega=0))
 
-while not rospy.is_shutdown():
-    publisher.publish(msg)
-    rate.sleep()
+if __name__ == '__main__':
+    circle()
 
