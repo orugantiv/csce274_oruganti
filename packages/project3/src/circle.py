@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#i used class slides
 import rospy
 from duckietown_msgs.msg import Twist2DStamped
 from time import sleep
