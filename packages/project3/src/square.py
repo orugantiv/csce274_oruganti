@@ -10,7 +10,7 @@ def square():
     while(count<4):
         pub = rospy.Publisher("car_cmd_switch_node/cmd", Twist2DStamped, queue_size=10)
         rospy.init_node('Square')
-        pub.publish(Twist2DStamped(header=None, v=0.4,omega=0.2))
+        pub.publish(Twist2DStamped(header=None, v=0.4,omega=0.0))
         sleep(2.5)
         pub.publish(Twist2DStamped(header=None, v=0.0,omega=0))
         sleep(1)
