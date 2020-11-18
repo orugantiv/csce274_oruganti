@@ -45,6 +45,7 @@ ENV DT_MAINTAINER "${MAINTAINER}"
 ENV DT_REPO_PATH "${REPO_PATH}"
 ENV DT_LAUNCH_PATH "${LAUNCH_PATH}"
 ENV DT_LAUNCHER "${LAUNCHER}"
+ENV VEHICLE_NAME "$hostname"
 
 # install apt dependencies
 COPY ./dependencies-apt.txt "${REPO_PATH}/"
