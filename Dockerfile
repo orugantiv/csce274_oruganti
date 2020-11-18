@@ -14,6 +14,7 @@ ARG BASE_IMAGE=dt-ros-commons
 ARG BASE_IMAGE2=dt-core
 ARG LAUNCHER=default
 
+
 # define base image
 FROM duckietown/${BASE_IMAGE}:${BASE_TAG}
 FROM duckietown/${BASE_IMAGE2}:${BASE_TAG}
@@ -87,3 +88,5 @@ LABEL org.duckietown.label.module.type="${REPO_NAME}" \
 # <== Do not change the code above this line
 # <==================================================
 ENTRYPOINT /bin/bash
+ARG VEHICLE_NAME ='$hostname' 
+ENV env_var_name=$VEHICLE_NAME 
