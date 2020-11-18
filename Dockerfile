@@ -88,5 +88,5 @@ LABEL org.duckietown.label.module.type="${REPO_NAME}" \
 # <== Do not change the code above this line
 # <==================================================
 ENTRYPOINT /bin/bash
-ARG VEHICLE_NAME ='$hostname' 
+ARG VEHICLE_NAME ="ducky" 
 ENV env_var_name=$VEHICLE_NAME 
