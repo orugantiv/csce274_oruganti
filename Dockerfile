@@ -2,7 +2,6 @@
 ARG REPO_NAME="csce274_oruganti"
 ARG DESCRIPTION="This is for CSCE274 from Anirudh"
 ARG MAINTAINER="V.N.Anirudh Oruganti (oruganti@email.sc.edu)"
-ARG VEHICLE_NAME 
 # pick an icon from: https://fontawesome.com/v4.7.0/icons/
 ARG ICON="cube"
 
@@ -90,4 +89,3 @@ LABEL org.duckietown.label.module.type="${REPO_NAME}" \
 # <==================================================
 ENTRYPOINT /bin/bash
 
-ENV env_var_name=$VEHICLE_NAME 
