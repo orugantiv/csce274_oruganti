@@ -13,9 +13,9 @@ class lanefollowing:
         self.kd_d=6
         self.dt=0.1
         self.previous_error_phi=0
-        self.set_point_phi =0.05000000074505806
-        self.kp_phi=5.5
-        self.kd_phi=0.5
+        self.set_point_phi =0.05
+        self.kp_phi=4.5
+        self.kd_phi=1.2
         self.d=0
         self.phi=0
         self.pub = rospy.Publisher("lane_controller_node/car_cmd", Twist2DStamped, queue_size=10)
@@ -44,9 +44,7 @@ class lanefollowing:
             self.pub.publish(Twist2DStamped(header=None, v=0.2,omega=-4))
         else:
             self.pub.publish(Twist2DStamped(header=None, v=0.4,omega=self.phi))
-
-        print(self.phi)
-        rospy.loginfo(rospy.get_caller_id() + 'This is by V.N.Anirudh Oruganti and publishing phi %s', self.phi)
+        rospy.loginfo(rospy.get_caller_id() + 'This is by V.N.Anirudh Oruganti LANE FOLLOWING CODE. phi %s', self.phi)
 
     def listener(self):
         rospy.init_node('listener')
